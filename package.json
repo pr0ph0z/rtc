@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/pr0ph0z/rtc/issues"
   },
-  "homepage": "https://github.com/pr0ph0z/rtc#readme"
+  "homepage": "https://github.com/pr0ph0z/rtc#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
