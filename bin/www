@@ -85,4 +85,5 @@ function onListening () {
     ? 'pipe ' + addr
     : 'port ' + addr.port
   debug('Listening on ' + bind)
+  require('../services/mongo').createConnection()
 }

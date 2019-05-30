@@ -10,6 +10,8 @@ const cors = (req, res, next) => {
   next()
 }
 
+app.database = null
+
 app.use(morgan('dev'))
 app.use(cors)
 app.use(routes)
