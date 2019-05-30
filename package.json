@@ -1,0 +1,26 @@
+{
+  "name": "rtc",
+  "version": "1.0.0",
+  "description": "Real time communication using Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pr0ph0z/rtc.git"
+  },
+  "keywords": [
+    "rtc",
+    "messaging",
+    "websocket",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Mohamad Radisha <pr0ph0z23@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pr0ph0z/rtc/issues"
+  },
+  "homepage": "https://github.com/pr0ph0z/rtc#readme"
+}
