@@ -10,12 +10,12 @@ const cors = (req, res, next) => {
   next()
 }
 
+app.use(morgan('dev'))
 app.use(cors)
 app.use(routes)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
   extended: true
 }))
-app.use(morgan('tiny'))
 
 module.exports = app
