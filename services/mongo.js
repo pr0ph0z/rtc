@@ -14,6 +14,7 @@ const createConnection = async () => {
   try {
     const connection = await mongo.connect(config.mongoURL, options)
     app.database = connection
+    return connection
   } catch (err) {
     throw new Error(err)
   }
