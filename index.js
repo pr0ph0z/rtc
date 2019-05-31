@@ -1,5 +1,6 @@
 const AppServer = require('./app')
+const mongo = require('./services/mongo')
 
 AppServer.listen(3000, async () => {
-  AppServer.database = await require('./services/mongo').createConnection()
+  mongo.createConnection()
 })

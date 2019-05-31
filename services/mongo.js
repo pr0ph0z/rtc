@@ -13,8 +13,8 @@ const createConnection = async () => {
 
   try {
     const connection = await mongo.connect(config.mongoURL, options)
-    app.database = connection
-    return connection
+    app.database = connection.db(process.env.MONGO_NAME)
+    app.database_client = connection
   } catch (err) {
     throw new Error(err)
   }
