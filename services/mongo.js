@@ -1,6 +1,7 @@
 const mongo = require('mongodb').MongoClient
 const app = require('../app')
 const config = require('../config')
+let services = require('./index')
 
 const createConnection = async () => {
   const options = {
@@ -13,8 +14,7 @@ const createConnection = async () => {
 
   try {
     const connection = await mongo.connect(config.mongoURL, options)
-    app.database = connection.db(process.env.MONGO_NAME)
-    app.database_client = connection
+    services.db = connection.db(process.env.MONGO_NAME)
   } catch (err) {
     throw new Error(err)
   }
