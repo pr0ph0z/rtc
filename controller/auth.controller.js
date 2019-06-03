@@ -1,6 +1,16 @@
-let services = require('../services/index')
+const services = require('../services/index')
+const utils = require('../utils')
+
+let response = null
 
 exports.register = async (req, res, next) => {
-  let coll = services.db.collection('test')
-  res.send(await coll.find({}).toArray())
+  if (utils.checkBody(req.body, utils.registerBody)) {
+    console.log(req.body)
+    console.log(utils.registerBody)
+    response = utils.requestResponse.success
+  } else {
+    response = utils.requestResponse.body_incomplete
+  }
+
+  res.json(response)
 }

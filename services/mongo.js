@@ -1,5 +1,4 @@
 const mongo = require('mongodb').MongoClient
-const app = require('../app')
 const config = require('../config')
 let services = require('./index')
 

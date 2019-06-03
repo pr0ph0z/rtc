@@ -14,10 +14,10 @@ app.database = null
 
 app.use(morgan('dev'))
 app.use(cors)
-app.use(routes)
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({
+app.use(express.json())
+app.use(express.urlencoded({
   extended: true
 }))
+app.use(routes)
 
 module.exports = app
