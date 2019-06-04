@@ -5,12 +5,19 @@ let response = null
 
 exports.register = async (req, res, next) => {
   if (utils.checkBody(req.body, utils.registerBody)) {
-    console.log(req.body)
-    console.log(utils.registerBody)
+    let User = services.db.collection('test')
+    await User.insertOne({
+      username: req.body.username,
+      password: req.body.password,
+      email: req.body.email,
+      profile: {
+        full_name: req.body.full_name
+      }
+    })
     response = utils.requestResponse.success
   } else {
-    response = utils.requestResponse.body_incomplete
+    response = utils.requestResponse.incomplete_body
   }
 
-  res.json(response)
+  res.status(response.code).json(response)
 }

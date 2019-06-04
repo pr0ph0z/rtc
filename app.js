@@ -12,7 +12,7 @@ const cors = (req, res, next) => {
 
 app.database = null
 
-app.use(morgan('dev'))
+// app.use(morgan('dev'))
 app.use(cors)
 app.use(express.json())
 app.use(express.urlencoded({

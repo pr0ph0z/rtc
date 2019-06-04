@@ -14,7 +14,7 @@ const registerBody = [
 ]
 
 const requestResponse = {
-  body_incomplete: {
+  incomplete_body: {
     code: 400,
     status: 'failed',
     message: 'Bad request. Please check your request data.'
