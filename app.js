@@ -2,6 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const routes = require('./routes/index')
+const mongo = require('./services/mongo')
+mongo.createConnection()
 const app = express()
 const cors = (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
