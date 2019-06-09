@@ -36,7 +36,7 @@ exports.register = async (req, res, next) => {
       token: token,
       created_at: new Date() / 1000 | 0
     })
-    response = utils.requestResponse.success
+    response = Object.assign(utils.requestResponse.success, { token: token })
   } else {
     response = utils.requestResponse.incomplete_body
   }
